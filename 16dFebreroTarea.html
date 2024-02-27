@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocho de color</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        .opciones{
+            background-color: rgb(255, 186, 234);
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .color-opcion{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            display: inline-block;
+            cursor: pointer;
+            margin: 20px; /* Añadido un margen para separar los botones */
+        }
+        .bio-container {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .bio {
+            display: none;
+        }
+        .bio-image {
+            float: left;
+            margin-left: 10px;
+            max-width: 300px; /* Ajusta el ancho máximo de la imagen */
+            border-radius: 8px; /* Borde redondeado para la imagen */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="cambiar-bocho" class="opciones">
+            <div class="color-opcion" onclick="mostrarBiografia('mont')">
+                <img src="mont.JPG" alt="Montse Gonzalez" style="width: 100%; border-radius: 50%;">
+            </div>
+            <div class="color-opcion" onclick="mostrarBiografia('cass')">
+                <img src="cass.jpg" alt="Marie Curie" style="width: 100%; border-radius: 50%;">
+            </div>
+            <div class="color-opcion" onclick="mostrarBiografia('pab')">
+                <img src="pab.jpg" alt="Leonardo da Vinci" style="width: 100%; border-radius: 50%;">
+            </div>
+            <div class="color-opcion" onclick="mostrarBiografia('fer')">
+                <img src="fer.jpg" alt="Isaac Newton" style="width: 100%; border-radius: 50%;">
+            </div>
+        </div>
+        <h1>Mis amigos</h1>
+        <div id="biografias" class="bio-container">
+            <div id="mont" class="bio">
+                <h2>Montse Gonzalez</h2>
+                <p>Esta soy yo, mi nombre completo es: Carmen Montserrat Ortega Gonzalez, tengo 19 años, en unos
+                    meses exactamente el 07 de mayo cumplo los 20. Actualmente estoy estudiando Ingenieria en Software
+                    en la Universidad Politecnica de Lazaro Cardenas. 
+                </p>
+                <p>Este es mi trabajo, en el cual presento a mis personas favoritas, mi circulo pequeño de amigos,
+                    al seleccionar su cara les muestra una pequeña biografia y una imagen de ellos.
+                </p>
+                <img src="mont.JPG" alt="Albert Einstein" class="bio-image">
+            </div>
+            <div id="cass" class="bio">
+                <h2>Cassandra Cortez</h2>
+                <p>Ella es mi mejor amiga, una persona muy especial para mi. Ella es la persona mas noble que 
+                    conozco, con un corazon tan puro, si la tuviera que describir en una palabra, seria perfeccion.
+                    Tiene 19 años, actualmente esta estudiando derecho en la Universidad Michoacana, es una excelente
+                    alumna, ella es muy inteligente y dedicada, muy responsable en todo. La conozco hace casi 8 años 
+                    y de verdad podria decir que es una execelente persona.
+                </p>
+                <img src="cass.jpg" alt="Albert Einstein" class="bio-image">
+            </div>
+            <div id="pab" class="bio">
+                <h2>Pablo Rodriguez</h2>
+                <p>El es mi novio, es la persona mas importante en mi vida ahora. Su nombre es Juan Pablo, pero de 
+                    de cariño le dicen Pepin, tiene 19 años y su cumpleaños es el 20 de Diciembre. Es una persona de admirar
+                    a pesar de lo dificil que ha sido su vida, todos los dias se esfuerza para salir adelante, yo admiro la 
+                    persona que es, cada dia se esfuerza en demostrar lo capaz que puede ser en muchas cosas y aunque aveces
+                    no salen como lo planea, no se rinde y mira otras opciones.   
+                </p>
+                <p>
+                    Sin duda es alguien que marcara mi vida por completo, fuera de ser mi primer novio, es mi 
+                    primer amor, y me ha enseñado tanto de la vida, siempre demuestra estar bien para los demas 
+                    aunque el no este tan bien, el tiene un lugar importante en mi corazon y lo quiero mas de lo
+                    quiero mas de lo que el puede imaginar.
+                </p>
+                <img src="pab.jpg" alt="Albert Einstein" class="bio-image">
+            </div>
+            <div id="fer" class="bio">
+                <h2>Fernando Garcia</h2>
+                <p>El es Fernando, mi mejor amigo, la persona que mas amo, sin duda alguna mi persona favorita
+                    el es una persona increible, muy noble, divertido, tiene un gran corazon y sobre todo muy humilde.
+                    Lo conozco de años y no me salen las palabras para describir la persona tan maravillosa que es, 
+                    el merece lo mejor.
+                </p>
+                <img src="fer.jpg" alt="Albert Einstein" class="bio-image">
+            </div>
+        </div>
+    </div>
+    <script>
+        function mostrarBiografia(persona) {
+            var biografias = document.querySelectorAll('.bio');
+            biografias.forEach(bio => {
+                bio.style.display = 'none';
+            });
+            document.getElementById(persona).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
